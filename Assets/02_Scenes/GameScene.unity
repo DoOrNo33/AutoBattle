@@ -401,6 +401,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   PlayerPos: {fileID: 0}
   EnemyPos: {fileID: 0}
+  image: {fileID: 764510193}
+  playerMoveSpeed: 10
 --- !u!114 &548169776
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -414,7 +416,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   player: {fileID: 548169775}
-  distanceThreshold: 0
+  distanceThreshold: 1
 --- !u!1 &619394800
 GameObject:
   m_ObjectHideFlags: 0
