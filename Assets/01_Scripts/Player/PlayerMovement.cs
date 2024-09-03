@@ -37,7 +37,7 @@ public class PlayerMovement : MonoBehaviour
             // 플레이어와 적의 거리가 너무 멀다면 다가감
             if (distance > distanceThreshold)
             {
-                player.transform.position += Vector3.right * player.playerMoveSpeed * Time.deltaTime;
+                //player.transform.position += Vector3.right * player.playerMoveSpeed * Time.deltaTime;
             }
         }
 
@@ -52,7 +52,7 @@ public class PlayerMovement : MonoBehaviour
             // 플레이어와 적의 거리가 너무 멀다면 다가감
             if (distance > distanceThreshold)
             {
-                player.transform.position += Vector3.left * player.playerMoveSpeed * Time.deltaTime;
+                //player.transform.position += Vector3.left * player.playerMoveSpeed * Time.deltaTime;
             }
         }
     }
