@@ -4,6 +4,7 @@ using UnityEngine;
 
 public class Player : MonoBehaviour
 {
+    public Transform PlayerPos;
     public Transform EnemyPos;
 
     // Start is called before the first frame update
@@ -16,5 +17,10 @@ public class Player : MonoBehaviour
     void Update()
     {
         
+    }
+
+    private void FixedUpdate()
+    {
+        PlayerPos = gameObject.transform;
     }
 }
