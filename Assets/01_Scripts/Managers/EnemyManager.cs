@@ -33,7 +33,7 @@ public class EnemyManager : Singleton<EnemyManager>
         enemy.InitializeData(enemyDataList[enemyIndex]);
 
         // 인덱스 초기화
-        if (enemyIndex >= enemyDataList.Count)
+        if (enemyIndex >= (enemyDataList.Count - 1))
         {
             enemyIndex = 0;
         }
