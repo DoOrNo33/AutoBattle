@@ -6,13 +6,18 @@ public class EnemySearch : MonoBehaviour
 {
     [Header("적 인식")]
     // 적 인식 포지션
-    [SerializeField] private Vector3 centerPos;
+    [SerializeField] private Vector2 centerPos;
 
     // 적 인식 범위
-    [SerializeField] private Vector3 searchRange;
+    [SerializeField] private Vector2 searchRange;
 
     [SerializeField] private LayerMask enemyLayer;
     [SerializeField] private Transform enemyPos;
+
+    [SerializeField] private Player player;
+
+    private float searchThreshold = 0.5f;
+    private float searchAngle = 0f;
 
     private void Start()
     {
@@ -34,18 +39,30 @@ public class EnemySearch : MonoBehaviour
         while(true)
         {
             // 공격 콜라이더 검출
-            Collider[] hits = Physics.OverlapBox(centerPos, searchRange, Quaternion.identity, enemyLayer);
+            Collider2D[] hits = Physics2D.OverlapBoxAll(centerPos, searchRange,searchAngle, enemyLayer);
 
-            if (hits != null)
+            if (hits.Length > 0)
             {
-                foreach (Collider hit in hits)
+                Debug.Log("!!");
+
+                foreach (Collider2D hit in hits)
                 {
                     // 적 위치 하나만 확정
                     enemyPos = hit.gameObject.transform;
+
+                    // 첫 번째 적만 선택
+                    break;
                 }
+                
+                player.EnemyPos = enemyPos;
+            }
+            else
+            {
+                Debug.Log("적 감지 없음");
+                player.EnemyPos = null;
             }
 
-            yield return null;
+            yield return new WaitForSeconds(searchThreshold);
         }
 
     }
