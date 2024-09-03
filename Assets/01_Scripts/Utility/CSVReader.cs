@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using System.IO;
+using System;
 
 public class CSVReader : MonoBehaviour
 {
@@ -38,6 +39,7 @@ public class CSVReader : MonoBehaviour
     }
 }
 
+[Serializable]
 public class EnemyData
 {
     public string Name;

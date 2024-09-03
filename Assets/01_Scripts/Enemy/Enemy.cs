@@ -13,6 +13,8 @@ public class Enemy : MonoBehaviour
     private float currentHealth;
     [SerializeField] private float moveSpeed;
 
+    [SerializeField] private SpriteRenderer sprite;
+
     // TODO : 이벤트 구독 방식으로 변경
     [SerializeField] private EnemyHealthUI healthUI;
 
