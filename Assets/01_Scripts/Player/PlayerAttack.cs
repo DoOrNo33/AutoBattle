@@ -15,6 +15,7 @@ public class PlayerAttack : MonoBehaviour
         {
             Enemy enemy = collision.GetComponent<Enemy>();
             playerAttack = StartCoroutine(AttackEnemy(enemy));
+
         }
     }
 
@@ -40,4 +41,6 @@ public class PlayerAttack : MonoBehaviour
             if (enemy == null) break;
         }
     }
+
+    // TODO: 플레이어 조작으로 빠르게 collider 범위 안팍을 오갈 때 처리
 }

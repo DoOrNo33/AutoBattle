@@ -43,8 +43,6 @@ public class EnemySearch : MonoBehaviour
 
             if (hits.Length > 0)
             {
-                Debug.Log("!!");
-
                 foreach (Collider2D hit in hits)
                 {
                     // 적 위치 하나만 확정
@@ -58,7 +56,6 @@ public class EnemySearch : MonoBehaviour
             }
             else
             {
-                Debug.Log("적 감지 없음");
                 player.EnemyPos = null;
             }
 
