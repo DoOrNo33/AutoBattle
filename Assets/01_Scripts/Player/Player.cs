@@ -8,6 +8,8 @@ public class Player : MonoBehaviour
     public Transform EnemyPos;
     public SpriteRenderer image;
 
+    public float playerDamage = 100;
+    public float playerAttackSpeed = 1;
     public float playerMoveSpeed;
 
 
