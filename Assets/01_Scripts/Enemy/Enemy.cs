@@ -18,12 +18,6 @@ public class Enemy : MonoBehaviour
     // TODO : 이벤트 구독 방식으로 변경
     [SerializeField] private EnemyHealthUI healthUI;
 
-    private void Start()
-    {
-        currentHealth = baseHealth;
-        healthUI.UpdateHealthUI(baseHealth, currentHealth);
-    }
-
     public void TakeDamage(float damage)
     {
         currentHealth -= damage;
@@ -39,6 +33,7 @@ public class Enemy : MonoBehaviour
 
             // 죽음 로직
             Destroy(gameObject);
+            EnemyManager.Instance.CreateEnemy();
 
             return;
         }
@@ -56,6 +51,23 @@ public class Enemy : MonoBehaviour
         info.Health = baseHealth;
 
         return info;
+    }
+
+    public void InitializeData(EnemyData data)
+    {
+        enemyName = data.Name;
+        enemyGrade = data.Grade;
+        baseHealth = data.Health;
+        moveSpeed = data.Speed;
+        sprite.sprite = data.Sprite;
+
+        SetEnemy();
+    }
+
+    private void SetEnemy()
+    {
+        currentHealth = baseHealth;
+        healthUI.UpdateHealthUI(baseHealth, currentHealth);
     }
 }
 

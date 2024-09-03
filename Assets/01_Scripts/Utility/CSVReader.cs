@@ -3,9 +3,12 @@ using System.Collections.Generic;
 using UnityEngine;
 using System.IO;
 using System;
+using UnityEngine.UI;
 
 public class CSVReader : MonoBehaviour
 {
+    [SerializeField] DataManager dataManager;
+
     public TextAsset csvFile;
 
     public List<EnemyData> ReadCSV()
@@ -26,10 +29,11 @@ public class CSVReader : MonoBehaviour
             string[] values = line.Split(',');
             EnemyData data = new EnemyData
             {
-                Name = values[0],
-                Grade = values[1],
-                Speed = float.Parse(values[2]),
-                Health = float.Parse(values[3])
+                Sprite = dataManager.EnemySprite[int.Parse(values[0])],
+                Name = values[1],
+                Grade = values[2],
+                Speed = float.Parse(values[3]),
+                Health = float.Parse(values[4])
             };
 
             enemyDataList.Add(data);
@@ -46,4 +50,5 @@ public class EnemyData
     public string Grade;
     public float Speed;
     public float Health;
+    public Sprite Sprite; 
 }
