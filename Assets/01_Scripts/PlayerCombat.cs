@@ -17,7 +17,7 @@ public class PlayerCombat : MonoBehaviour
 
     private void Start()
     {
-
+        StartCoroutine(PlayerAttack());
     }
 
     private void OnDrawGizmos()
@@ -32,8 +32,18 @@ public class PlayerCombat : MonoBehaviour
     // 플레이어 공격
     private IEnumerator PlayerAttack()
     {
-        Collider[] hits = Physics.OverlapBox(playerPos.position + AdjustPos, attackRange, Quaternion.identity, enemyLayer);
+        while(true)
+        {
+            // 공격 콜라이더 검출
+            Collider[] hits = Physics.OverlapBox(playerPos.position + AdjustPos, attackRange, Quaternion.identity, enemyLayer);
 
-        yield return new WaitForSeconds(attackSpeed);
+            if (hits != null)
+            {
+                Debug.Log("Hit");
+            }
+
+            yield return new WaitForSeconds(attackSpeed);
+        }
+
     }
 }
