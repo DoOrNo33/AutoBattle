@@ -52,6 +52,7 @@ public class EnemySearch : MonoBehaviour
                     break;
                 }
                 
+                // 플레이어 스크립트에 현재 적 넣어주기
                 player.EnemyPos = enemyPos;
             }
             else

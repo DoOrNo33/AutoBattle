@@ -12,19 +12,6 @@ public class Player : MonoBehaviour
     public float playerAttackSpeed = 1;
     public float playerMoveSpeed;
 
-
-    // Start is called before the first frame update
-    void Start()
-    {
-        
-    }
-
-    // Update is called once per frame
-    void Update()
-    {
-        
-    }
-
     private void FixedUpdate()
     {
         PlayerPos = gameObject.transform;
