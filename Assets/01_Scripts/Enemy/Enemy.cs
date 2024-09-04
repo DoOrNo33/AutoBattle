@@ -11,12 +11,14 @@ public class Enemy : MonoBehaviour
     [SerializeField] private string enemyGrade;
     [SerializeField] private float baseHealth;
     private float currentHealth;
-    [SerializeField] private float moveSpeed;
+    public float moveSpeed;
+    public float maxMoveTime = 3;
 
     [SerializeField] private SpriteRenderer sprite;
 
     // TODO : 이벤트 구독 방식으로 변경
     [SerializeField] private EnemyHealthUI healthUI;
+    public GameObject healthBar;
 
     public void TakeDamage(float damage)
     {

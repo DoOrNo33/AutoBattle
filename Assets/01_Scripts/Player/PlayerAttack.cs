@@ -36,9 +36,6 @@ public class PlayerAttack : MonoBehaviour
             enemy.TakeDamage(player.playerDamage);
 
             yield return new WaitForSeconds(player.playerAttackSpeed);
-
-            // 적 없어지면 중단
-            if (enemy == null) break;
         }
     }
 

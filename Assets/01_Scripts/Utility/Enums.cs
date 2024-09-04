@@ -6,3 +6,9 @@ public enum EnemyName
     Werebear,
     OrcRider
 }
+
+public enum Direction
+{
+    left = 0,
+    right
+}
