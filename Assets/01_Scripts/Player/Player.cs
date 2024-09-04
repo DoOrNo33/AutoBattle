@@ -9,7 +9,8 @@ public class Player : MonoBehaviour
     public SpriteRenderer image;
 
     public float playerDamage = 100;
-    public float playerAttackSpeed = 1f;
+    public float playerAttackInterval = 1f;
+    public float playerAttackSpeed = 0.2f;
     public float playerMoveSpeed;
     public float attackRange = 0.5f;
 

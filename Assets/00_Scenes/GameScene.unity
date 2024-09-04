@@ -5331,7 +5331,8 @@ MonoBehaviour:
   EnemyPos: {fileID: 0}
   image: {fileID: 764510193}
   playerDamage: 100
-  playerAttackSpeed: 1
+  playerAttackInterval: 1
+  playerAttackSpeed: 0.2
   playerMoveSpeed: 7
   attackRange: 0.5
   Invincible: 0
@@ -5417,7 +5418,7 @@ BoxCollider2D:
   m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: -0.29068947, y: 0}
+  m_Offset: {x: -0.20667712, y: 0}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0, y: 0}
@@ -5428,7 +5429,7 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 0.48043716, y: 1}
+  m_Size: {x: 0.6484618, y: 1}
   m_EdgeRadius: 0
 --- !u!50 &548169780
 Rigidbody2D:
@@ -8406,7 +8407,7 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 4
-  m_Sprite: {fileID: 862284116, guid: 22de2b0d2abfde04d9bb5e3394b252cf, type: 3}
+  m_Sprite: {fileID: -1609225139, guid: 22de2b0d2abfde04d9bb5e3394b252cf, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -8452,6 +8453,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   animator: {fileID: 764510194}
   player: {fileID: 548169775}
+  spriteRenderer: {fileID: 764510193}
+  idleSprite: {fileID: -1609225139, guid: 22de2b0d2abfde04d9bb5e3394b252cf, type: 3}
+  attackSprite: {fileID: 862284116, guid: 22de2b0d2abfde04d9bb5e3394b252cf, type: 3}
 --- !u!1 &855663167
 GameObject:
   m_ObjectHideFlags: 0
@@ -8497,6 +8501,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   player: {fileID: 548169775}
+  playerAnimation: {fileID: 764510195}
 --- !u!1 &918126866
 GameObject:
   m_ObjectHideFlags: 3
