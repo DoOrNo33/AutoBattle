@@ -49,35 +49,4 @@ public class EnemyMovement : MonoBehaviour
     {
         playerPos = GameManager.Instance.player.transform;
     }
-
-    //public void FacePlayer()
-    //{
-    //    if (playerPos == null) return;
-    //    enemyPos = gameObject.transform;
-
-    //    // 플레이어와 적 사이의 거리 절대값
-    //    float distance = Mathf.Abs(playerPos.position.x - enemyPos.position.x);
-
-    //    // 플레이어가 왼쪽이라면
-    //    if (playerPos.position.x < enemyPos.position.x)
-    //    {
-    //        // 적 오브젝트 좌측 바라봄
-    //        Vector2 scale = gameObject.transform.localScale;
-    //        scale.x = Mathf.Abs(scale.x);
-    //        gameObject.transform.localScale = scale;
-    //    }
-    //    // 플레이어가 오른쪽이라면
-    //    else
-    //    {
-    //        // 플레이어 오브젝트 우측 바라봄
-    //        Vector2 scale = gameObject.transform.localScale;
-    //        scale.x = -Mathf.Abs(scale.x);
-    //        gameObject.transform.localScale = scale;
-    //    }
-    //}
-
-    //private void MoveEnemy()
-    //{
-
-    //}
 }

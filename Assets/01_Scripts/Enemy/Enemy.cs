@@ -43,6 +43,16 @@ public class Enemy : MonoBehaviour
         healthUI.UpdateHealthUI(baseHealth, currentHealth);
     }
 
+    // 플레이어 공격 처리
+    private void OnTriggerEnter2D(Collider2D other)
+    {
+        if (other.CompareTag("Player"))
+        {
+            Player player = other.GetComponent<Player>();
+            player.TakeDamage();
+        }
+    }
+
     //TODO : CSV를 이용해 한번에 세팅하면 될 듯
     public EnemyInfo GetEnemyInfo()
     {
