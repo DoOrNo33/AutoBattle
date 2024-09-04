@@ -9,8 +9,9 @@ public class Player : MonoBehaviour
     public SpriteRenderer image;
 
     public float playerDamage = 100;
-    public float playerAttackSpeed = 1;
+    public float playerAttackSpeed = 1f;
     public float playerMoveSpeed;
+    public float attackRange = 0.5f;
 
     public bool Invincible = false;
 

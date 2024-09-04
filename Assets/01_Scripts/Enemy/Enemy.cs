@@ -24,8 +24,6 @@ public class Enemy : MonoBehaviour
     {
         currentHealth -= damage;
 
-        Debug.Log(currentHealth);
-
         if (currentHealth <= 0)
         {
             currentHealth = 0;
