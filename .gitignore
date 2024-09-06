@@ -11,6 +11,8 @@
 /[Uu]ser[Ss]ettings/
 /Assets/99_ExternalAssets
 
+
+
 # MemoryCaptures can get excessive in size.
 # They also could contain extremely sensitive data
 /[Mm]emoryCaptures/
@@ -71,3 +73,8 @@ crashlytics-build.properties
 # Temporary auto-generated Android Assets
 /[Aa]ssets/[Ss]treamingAssets/aa.meta
 /[Aa]ssets/[Ss]treamingAssets/aa/*
+
+# Firebase 패키지 파일 무시
+/Assets/Plugins/Firebase/*.unitypackage
+/Assets/Firebase/Plugins/x86_64_FirebaseCppApp-12_2_1.bundle
+/Assets/Firebase

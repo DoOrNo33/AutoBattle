@@ -9379,7 +9379,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 22f2244d53a14a44d8f294ff4755b1fe, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  csvReader: {fileID: 1620503448}
+  csvReader: {fileID: 0}
   spawnStandardPos: {fileID: 482605581}
   enemyPrefab: {fileID: 3887162748808197386, guid: b8168dd1479259649b82d89b3233f2c8, type: 3}
   enemyDataList: []
@@ -10034,7 +10034,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1620503449}
   - component: {fileID: 1620503450}
-  - component: {fileID: 1620503448}
+  - component: {fileID: 1620503451}
   m_Layer: 0
   m_Name: DataManager
   m_TagString: Untagged
@@ -10042,20 +10042,6 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!114 &1620503448
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1620503447}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: e86826dfae6ad6345bee71db00683d4b, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  dataManager: {fileID: 1620503450}
-  csvFile: {fileID: 4900000, guid: 93e13a8a2e1820841a41eff7c88b1a19, type: 3}
 --- !u!4 &1620503449
 Transform:
   m_ObjectHideFlags: 0
@@ -10089,6 +10075,19 @@ MonoBehaviour:
   - {fileID: 1432405351, guid: 78a2d115a69b5534cb9bb425691cfa82, type: 3}
   - {fileID: 1041920312, guid: 810441e2067590340ab1e293f2427cb2, type: 3}
   - {fileID: -1366314463, guid: 0bdec241ca03dea498241c23a41ee86b, type: 3}
+--- !u!114 &1620503451
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1620503447}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9900c67ec4b815b4daa32708a2288022, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  dataManager: {fileID: 1620503450}
 --- !u!1 &1641379702
 GameObject:
   m_ObjectHideFlags: 0

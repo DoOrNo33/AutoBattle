@@ -1,4 +1,5 @@
 using System;
+using System.Collections;
 using System.Collections.Generic;
 using Unity.VisualScripting;
 using UnityEngine;
@@ -6,6 +7,7 @@ using UnityEngine;
 public class EnemyManager : Singleton<EnemyManager>
 {
     [SerializeField] private CSVReader csvReader;
+    [SerializeField] private CSVLoader csvLoader;
 
     [SerializeField] private Transform spawnStandardPos;
 
@@ -24,7 +26,20 @@ public class EnemyManager : Singleton<EnemyManager>
 
     void Start()
     {
-        enemyDataList = csvReader.ReadCSV();
+        //enemydatalist = csvreader.readcsv();
+
+        //CreateEnemy();
+
+        StartCoroutine(Init());
+    }
+
+    private IEnumerator Init()
+    {
+        // CSVLoader가 enemyDataList를 설정할 때까지 기다림
+        while (enemyDataList == null || enemyDataList.Count == 0)
+        {
+            yield return null;
+        }
 
         CreateEnemy();
     }
